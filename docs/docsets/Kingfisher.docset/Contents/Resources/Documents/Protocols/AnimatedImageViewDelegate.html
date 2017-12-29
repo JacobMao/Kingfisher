@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>DefaultImageModifier Structure Reference</title>
+    <title>AnimatedImageViewDelegate Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/DefaultImageModifier" class="dashAnchor"></a>
-    <a title="DefaultImageModifier Structure Reference"></a>
+    <a name="//apple_ref/swift/Protocol/AnimatedImageViewDelegate" class="dashAnchor"></a>
+    <a title="AnimatedImageViewDelegate Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Kingfisher Docs</a> (80% documented)</p>
@@ -23,7 +23,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Kingfisher Reference</a>
         <img id="carat" src="../img/carat.png" />
-        DefaultImageModifier Structure Reference
+        AnimatedImageViewDelegate Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -293,15 +293,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>DefaultImageModifier</h1>
+            <h1>AnimatedImageViewDelegate</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DefaultImageModifier</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ImageModifier.html">ImageModifier</a></span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">AnimatedImageViewDelegate</span><span class="p">:</span> <span class="kd">class</span></code></pre>
 
                 </div>
               </div>
-            <p>The default modifier.
-Does nothing and returns the image it was given</p>
+            <p>Protocol of <code><a href="../Classes/AnimatedImageView.html">AnimatedImageView</a></code>.</p>
 
           </section>
           <section class="section task-group-section">
@@ -310,59 +309,31 @@ Does nothing and returns the image it was given</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10Kingfisher20DefaultImageModifierV7defaultACvZ"></a>
-                    <a name="//apple_ref/swift/Variable/default" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Kingfisher20DefaultImageModifierV7defaultACvZ">default</a>
+                    <a name="/s:10Kingfisher25AnimatedImageViewDelegateP08animatedcD0yAA0bcD0C_Su21didPlayAnimationLoopstF"></a>
+                    <a name="//apple_ref/swift/Method/animatedImageView(_:didPlayAnimationLoops:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Kingfisher25AnimatedImageViewDelegateP08animatedcD0yAA0bcD0C_Su21didPlayAnimationLoopstF">animatedImageView(_:didPlayAnimationLoops:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A default <code>DefaultImageModifier</code> which can be used everywhere.</p>
+                        <p>Called after the animatedImageView has finished each animation loop.</p>
 
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">let</span> <span class="err">`</span><span class="k">default</span><span class="err">`</span> <span class="o">=</span> <span class="kt">DefaultImageModifier</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/onevcat/Kingfisher/tree/4.6.1/Sources/ImageModifier.swift#L68">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10Kingfisher20DefaultImageModifierV6modifySo7UIImageCAFF"></a>
-                    <a name="//apple_ref/swift/Method/modify(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Kingfisher20DefaultImageModifierV6modifySo7UIImageCAFF">modify(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Modify an input <code>Image</code>.</p>
-<div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    <p>See documentation of <code><a href="../Protocols/ImageModifier.html">ImageModifier</a></code> protocol for more.</p>
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">modify</span><span class="p">(</span><span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">Image</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Image</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">animatedImageView</span><span class="p">(</span><span class="n">_</span> <span class="nv">imageView</span><span class="p">:</span> <span class="kt"><a href="../Classes/AnimatedImageView.html">AnimatedImageView</a></span><span class="p">,</span> <span class="n">didPlayAnimationLoops</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -373,24 +344,88 @@ Does nothing and returns the image it was given</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>image</em>
+                                <em>imageView</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Image which will be modified by <code>self</code></p>
+                                  <p>The animatedImageView that is being animated.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>count</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The looped count.</p>
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/onevcat/Kingfisher/tree/4.6.1/Sources/AnimatedImageView.swift#L45">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Kingfisher25AnimatedImageViewDelegateP08animatedcD18DidFinishAnimatingyAA0bcD0CF"></a>
+                    <a name="//apple_ref/swift/Method/animatedImageViewDidFinishAnimating(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Kingfisher25AnimatedImageViewDelegateP08animatedcD18DidFinishAnimatingyAA0bcD0CF">animatedImageViewDidFinishAnimating(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called after the animatedImageView has reached the max repeat count.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">animatedImageViewDidFinishAnimating</span><span class="p">(</span><span class="n">_</span> <span class="nv">imageView</span><span class="p">:</span> <span class="kt"><a href="../Classes/AnimatedImageView.html">AnimatedImageView</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
                       <div>
-                        <h4>Return Value</h4>
-                        <p>The modified image.</p>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imageView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The animatedImageView that is being animated.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/onevcat/Kingfisher/tree/4.6.1/Sources/ImageModifier.swift#L80-L82">Show on GitHub</a>
+                        <a href="https://github.com/onevcat/Kingfisher/tree/4.6.1/Sources/AnimatedImageView.swift#L52">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
