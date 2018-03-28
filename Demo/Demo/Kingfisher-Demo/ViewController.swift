@@ -4,7 +4,7 @@
 //
 //  Created by Wei Wang on 15/4/6.
 //
-//  Copyright (c) 2017 Wei Wang <onevcat@gmail.com>
+//  Copyright (c) 2018 Wei Wang <onevcat@gmail.com>
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -82,9 +82,19 @@ extension ViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
     
-        cell.cellImageView.kf.indicatorType = .activity
-        
+        cell.cellImageView.kf.indicatorType = .custom(indicator: MyIndicator())
         return cell
+    }
+}
+
+struct MyIndicator: Indicator {
+    let view: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+    
+    func startAnimatingView() { print("start"); view.isHidden = false }
+    func stopAnimatingView() { view.isHidden = true }
+    
+    init() {
+        view.backgroundColor = UIColor.blue
     }
 }
 

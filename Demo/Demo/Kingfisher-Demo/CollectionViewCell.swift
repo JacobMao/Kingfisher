@@ -1,10 +1,10 @@
 //
-//  AppDelegate.swift
-//  Kingfisher-macOS-Demo
+//  CollectionViewCell.swift
+//  Kingfisher-Demo
 //
-//  Created by Wei Wang on 16/1/6.
+//  Created by Wei Wang on 15/4/6.
 //
-//  Copyright (c) 2017 Wei Wang <onevcat@gmail.com>
+//  Copyright (c) 2018 Wei Wang <onevcat@gmail.com>
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -24,21 +24,18 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import Cocoa
-import Kingfisher
+import UIKit
 
-@NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class CollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var cellImageView: UIImageView!
+    
+    #if os(tvOS)
+    override func awakeFromNib() {
+        super.awakeFromNib()
 
-
-
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        cellImageView.adjustsImageWhenAncestorFocused = true
+        cellImageView.clipsToBounds = false
     }
-
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
-    }
-
-
+    #endif
 }
