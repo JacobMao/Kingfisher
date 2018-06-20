@@ -2,6 +2,28 @@
 
 -----
 
+## [4.8.0 - Watch & Watching](https://github.com/onevcat/Kingfisher/releases/tag/4.8.0) (2018-05-15)
+
+#### Add
+* WKInterfaceImage setting image interface for watchOS. [#913](https://github.com/onevcat/Kingfisher/pull/913)
+* A new delegate method for watching `ImageDownloader` object completes a downloading request with success or failure. [#901](https://github.com/onevcat/Kingfisher/pull/901)
+
+#### Fix
+
+* Use newly created operation queue for downloader. 
+* Filter.init(tranform:) is renamed to Filter.init(transform:) 
+* Some internal minor fix on constant and typo, etc.
+
+---
+
+## [4.7.0 - Cancel All](https://github.com/onevcat/Kingfisher/releases/tag/4.7.0) (2018-04-06)
+
+#### Add
+* ImageDownloader now contains a method `cancelAll` to cancel all downloading tasks. [#894](https://github.com/onevcat/Kingfisher/pull/894)
+* Supports Swift 4.1 and Xcode 9.3. [#889](https://github.com/onevcat/Kingfisher/pull/889)
+
+---
+
 ## [4.6.4 - Customize Activity Indicator](https://github.com/onevcat/Kingfisher/releases/tag/4.6.4) (2018-03-20)
 
 #### Fix
